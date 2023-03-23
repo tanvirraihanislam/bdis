@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Bookmark Display",
+    "version": "1.0",
+    "description": "Displays bookmarks on a page with a card-like structure",
+    "permissions": [
+        "bookmarks"
+    ],
+    "chrome_url_overrides": {
+        "newtab": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.google.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
